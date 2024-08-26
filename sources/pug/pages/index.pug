@@ -1,0 +1,251 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-icon-box
+include ../elements/_ui-card
+include ../elements/_ui-thumbnail-2
+include ../elements/_ui-link-image
+include ../elements/_ui-quote-bordered
+include ../elements/_ui-post-boxed
+include ../elements/_section-counters-default
+
+block variables
+  - var activeIndex = 0
+
+block title
+  title Home
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  section
+    .swiper-container.swiper-slider.swiper-variant-1.bg-black(
+    data-loop='true'
+    data-autoplay='false'
+    data-simulate-touch='true'
+    data-slide-effect='fade')
+      .swiper-wrapper.text-center
+        .swiper-slide(data-slide-bg='images/home-slider-slide-1.jpg')
+          .swiper-slide-caption
+            .container
+              h2.slider-header(data-caption-animate='fadeInDownSmall') Affordable and Effective Legal Help
+              p.big.slider-text(data-caption-animate='fadeInDownSmall', data-caption-delay='100') Strategies of our attorneys will help you solve very complex legal issues.
+              .group-xl-responsive
+                a.button.button-lg.button-default-outline(data-caption-animate='fadeInDownSmall', data-caption-delay='200', href='appointment.html') Request a Free Consultation
+
+        .swiper-slide(data-slide-bg='images/home-slider-slide-2.jpg')
+          .swiper-slide-caption
+            .container
+              h2.slider-header(data-caption-animate='fadeInDownSmall' style='max-width: 700px;') Your consultant in social and criminal legal issues
+              p.big.slider-text(data-caption-animate='fadeInDownSmall', data-caption-delay='100') Our experience and qualification provide the opportunity to solve the problems of any complexity.
+              .group-xl-responsive
+                a.button.button-lg.button-default-outline(data-caption-animate='fadeInDownSmall', data-caption-delay='200', href='appointment.html') Request a Free Consultation
+
+        .swiper-slide(data-slide-bg='images/home-slider-slide-3.jpg')
+          .swiper-slide-caption
+            .container
+              h2.slider-header(data-caption-animate='fadeInDownSmall' style='max-width: 1100px;') We're Always Available for Customers with Emergent Lawyer Problems.
+              p.big.slider-text(data-caption-animate='fadeInDownSmall', data-caption-delay='100') You can easily reach us 24/7 via the phone number below:
+              dl.address-group(data-caption-animate='fadeInDownSmall', data-caption-delay='200')
+                dt Tel 
+                dd: a(href='tel:#') 1.555.123.2323
+
+
+      //- Swiper Scrollbar
+      .swiper-scrollbar.d-lg-none
+
+      //- Swiper Navigation
+      .swiper-nav-wrap
+        .swiper-button-prev
+        .swiper-button-next
+
+  ='\n'
+
+  //- Icon Box
+  section.section-50.section-md-75.section-lg-100
+    .container
+      include ../sections/_section-icon-box
+  ='\n'
+
+  //- About
+  section.section.section-66.bg-ebony-clay.bg-image(style='background-image: url(images/bg-image-3.jpg);')
+    .container
+      h3.text-center About Us
+      .row.row-50
+        .col-lg-8
+          .row.row-15
+            .col-md-6
+              p The #[strong LawFirm] is among the largest, most well-established and respected firms serving North Carolina residents and businesses. Since 1907, we have provided strategic legal counsel and services to meet clients’ personal, estate planning, commercial, business and litigation needs. We dedicate ourselves to being more than legal representatives.
+
+            .col-md-6
+              p We take the time to get to know our clients, understand their goals and develop strategies that often exceed their expectations – always helping them to navigate through challenges and identify opportunities where they may succeed. The confidence entrusted to us by our clients to represent them and share our best practices is a value we hold with the highest esteem.
+
+        .col-lg-4  
+          blockquote.blockquote-complex.blockquote-complex-inverse
+            svg.quote-open(version='1.1', baseprofile='tiny', xmlns='http://www.w3.org/2000/svg', width='37px', height='27px',viewbox='0 0 21 15', preserveAspectRatio='none')
+              path(d='M9.597,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.349,1.316\
+                              c-1.287,0-2.414-0.44-3.382-1.316C0.482,12.811,0,11.758,0,10.535c0-1.226,0.58-2.716,1.739-4.473L5.603,0H9.34L6.956,6.37\
+                              C8.716,7.145,9.597,8.493,9.597,10.412z M20.987,10.412c0,1.306-0.473,2.399-1.418,3.277c-0.944,0.876-2.06,1.316-3.35,1.316\
+                              c-1.288,0-2.415-0.44-3.381-1.316c-0.966-0.879-1.45-1.931-1.45-3.154c0-1.226,0.582-2.716,1.74-4.473L16.994,0h3.734l-2.382,6.37\
+                              C20.106,7.145,20.987,8.493,20.987,10.412z')
+            
+            p: q.
+              When you place your case in the hands of our lawyers and paralegals, you are placing your case in the hands of professionals who are committed to achieving the best possible outcome.
+            .quote-footer
+              cite Ryan Emberson
+              small CEO at LawFirm
+
+        .col-12.text-center
+          a.button.button-medium.button-secondary-outline(href='appointment.html') Request a Free Consultation
+
+  ='\n'
+
+  //- Team members
+  section.section-60.section-lg-100
+    include ../sections/_section-experts
+  ='\n'
+
+  +counter-default({})
+
+  include ../sections/_section-testimonials-carousel
+
+  //- Clients
+  section.section-40.section-md-50.bg-whisper
+    .container
+      .row.row-40
+        .col-6.col-md-3: +link-image-scale({img: 'clients-light-3-132x69'})
+        .col-6.col-md-3: +link-image-scale({img: 'clients-light-1-162x76'})
+        .col-6.col-md-3: +link-image-scale({img: 'clients-light-2-153x69'})
+        .col-6.col-md-3: +link-image-scale({img: 'clients-light-4-146x58'})
+  ='\n'
+
+  //- FAQ
+  section.section.section-66.section-xl-90
+    .container
+      h3.text-center FAQ
+      .row.row-offset-1
+        .col-lg-6.d-none.d-lg-block
+          +png('home-3-569x472')
+          
+        .col-lg-6
+          #accordionOne.card-group.card-group-custom(role='tablist', aria-multiselectable='true')
+            +card({
+              first: true,
+              cardClass: 'card-light',
+              parentId: 'accordionOne',
+              number: '1',
+              header: "What are lawyer's primary responsibilities?"
+            })
+              p Lawyers, by virtue of a state's bar admission, are expected to both uphold the law and protect the rights of their clients. In addition to actually knowing the law, particularly within his or her practice area, an attorney must be able to communicate clearly with their clients, work competently to resolve their client's needs and be ethical in the performance of their overall handling of a case.
+
+            +card({
+              cardClass: 'card-light',
+              parentId: 'accordionOne',
+              number: '2',
+              header: "I can't afford a lawyer. Do you offer free legal help?"
+            })
+              p You may qualify for free legal help if you meet certain income requirements, especially if you are charged with a crime for which the sentence would deprive you of liberty (such as jail or prison time). For non-criminal matters, community legal clinics and lawyers working \"pro bono\" offer free legal services for those who qualify.
+
+            +card({
+              cardClass: 'card-light',
+              parentId: 'accordionOne',
+              number: '3',
+              header: "May I hire a non-lawyer for a legal problem? "
+            })
+              p It depends on the situation and the breadth of service since only lawyers may practice law. Paralegals, for example, may represent you in certain situations involving complaints against a government agency (such as a dispute over Social Security benefits). You may also represent yourself in court, hire a notary public, or work with law students (under the supervision of a lawyer) under certain circumstances.
+
+            +card({
+              cardClass: 'card-light',
+              parentId: 'accordionOne',
+              number: '4',
+              header: "What are the requirements for becoming a lawyer?"
+            })
+              p To become a lawyer, one must first complete special training and meet other professional requirements. Although each state has its own standards for licensing attorneys, most states require hopeful lawyers to obtain an undergraduate degree and then graduate from an accredited law school. Once the formal education is complete, they must also take and pass the state's Bar Examination (a rigid test of knowledge in all fields of law), submit to the investigation into their moral character and fitness to practice law, and be sworn in by the state or federal Supreme Court.
+      
+  ="\n"
+  
+  //- Free Consultation
+  section.bg-whisper
+    .container
+      .row
+        .col-md-10.col-lg-9.col-xl-7
+          .section-50.section-md-75.section-xl-100
+            h3 Free Consultation
+            //- RD Mailform
+            form.rd-mailform(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+              .row.row-30
+                .col-md-6
+                  .form-wrap
+                    input#request-form-name.form-input(type="text" name="name" data-constraints="@Required")
+                    label.form-label(for="request-form-name") Name
+                .col-md-6
+                  .form-wrap
+                    input#request-form-phone.form-input(type="text" name="phone" data-constraints="@Numeric @Required")
+                    label.form-label(for="request-form-phone") Phone
+                .col-md-6
+                  .form-wrap
+                    input#request-form-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+                    label.form-label(for="request-form-email") Email
+                .col-md-6
+                  .form-wrap.form-wrap-outside
+                    //Select 2
+                    select#request-form-select.form-input.select-filter(data-minimum-results-for-search="Infinity")
+                      option Family Law
+                      option(value="Family Law") Family Law
+                      option(value="Business Law") Business Law
+                      option(value="Civil Litigation") Civil Litigation
+
+                .col-12
+                  .form-wrap
+                    textarea#feedback-2-message.form-input(name="message" data-constraints="@Required")
+                    label.form-label(for="feedback-2-message") Message
+
+                .col-12: .row: .col-md-6
+                  button(type="submit").button.button-block.button-primary Request a Free Consultation
+
+        .col-xl-5.d-none.d-xl-block.col-image
+          img(src="images/business-person.png", alt="")
+
+  //- Latest News
+  section.section-50.section-md-75.section-xl-100
+    .container
+      h3.text-center Latest News
+      .row.row-40.row-offset-1.justify-content-sm-center.justify-content-md-start
+        .col-sm-9.col-md-6.col-lg-4.col-xl-3
+          +post-boxed({
+            img: 'home-5-268x182',
+            header: 'The Lawyers Collective Women\'s Rights Initiative',
+            time: ['2017-06-14', 'JUNE 14, 2017'],
+            user: 'Admin'
+          })
+
+        .col-sm-9.col-md-6.col-lg-4.col-xl-3
+          +post-boxed({
+            img: 'home-6-268x182',
+            header: 'Legal Documents Every Landlord Needs',
+            time: ['2017-06-20', 'JUNE 20, 2017'],
+            user: 'Admin'
+          })
+
+        .col-sm-9.col-md-6.col-lg-4.col-xl-3
+          +post-boxed({
+            img: 'home-7-268x182',
+            header: 'Help Us Make the Law Accessible for Everyone',
+            time: ['2017-06-23', 'JUNE 23, 2017'],
+            user: 'Admin'
+          })
+
+        .col-sm-9.col-md-6.col-lg-4.col-xl-3
+          +post-boxed({
+            img: 'home-8-268x182',
+            header: '5 Legal Documents for Military Service People',
+            time: ['2017-06-12', 'JUNE 12, 2017'],
+            user: 'Admin'
+          })
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

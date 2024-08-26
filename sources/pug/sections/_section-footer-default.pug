@@ -1,0 +1,93 @@
+//- Includes
+include ../elements/_ui-post-preview
+
+//- Footer Widget
+footer.page-foot.context-dark
+  .section-40.section-md-75
+    .container
+      .row.justify-content-sm-center
+        .col-sm-9.col-md-11.col-xl-12
+          .row.row-50
+            .col-md-6.col-lg-10.col-xl-3
+              .inset-xl-right-20(style='max-width: 510px;')
+                //- Brand
+                a.brand(href='index.html')
+                  +logo(true)
+                p.
+                  If you or your business is facing a legal
+                  challenge that calls for sound advice and skilled representation, contact us today to arrange a free  consultation with an attorney.
+                a.link.link-group.link-group-animated.link-bold(href="appointment.html")
+                  span Free Consultation
+                  span.novi-icon.icon.icon-xxs.icon-primary.fa.fa-angle-right
+                  
+            .col-md-6.col-lg-4.col-xl-4
+              p.h7 Quick links
+              .row
+                .col-6
+                  ul.list-marked-variant-2                    
+                    li: a(href='#') Family Law
+                    li: a(href='#') Starting a Business
+                    li: a(href='#') Business Contracts
+                    li: a(href='#') Wills & Trusts
+
+                .col-6
+                  ul.list-marked-variant-2
+                    li: a(href='#') Criminal Law
+                    li: a(href='#') Employment Law
+                    li: a(href='#') Personal Injuries
+                    li: a(href='#') Real Estate Law  
+
+            .col-md-6.col-lg-4.col-xl-2
+              p.h7 Contact us 
+              address.contact-info.text-left
+                .unit.unit-horizontal.unit-spacing-sm.align-items-center
+                  .unit-left: span.novi-icon.icon.icon-xs.icon-storm-gray.material-icons-phone
+                  .unit-body: a.link-white(href='tel:#') +123 234 984 47 45
+
+                .unit.unit-horizontal.unit-spacing-sm.align-items-center
+                  .unit-left: span.novi-icon.icon.icon-xs.icon-storm-gray.fa.fa-envelope-o
+                  .unit-body: a.link-white(href='mailto:#') info@demolink.org
+
+                .unit.unit-horizontal.unit-spacing-sm
+                  .unit-left: span.novi-icon.icon.icon-xs.icon-storm-gray.material-icons-place
+                  .unit-body
+                    a.link-white.d-inline(href='#')
+                      | 6036 Richmond hwy,
+                      | Alexandria, VA USA 22303
+                    
+            .col-md-6.col-lg-4.col-xl-3
+              p.h7 Recent Posts
+              +post-preview({
+                classes: ['post-preview-inverse'],
+                img: 'post-preview-4-70x70',
+                header: 'Help Us Make the Law Accessible for Everyone',
+                time: ['2017-06-23', 'June 23, 2017 ']
+              })
+
+              +post-preview({
+                classes: ['post-preview-inverse'],
+                img: 'post-preview-5-70x70',
+                header: 'Legal Documents Every Landlord Needs ',
+                time: ['2017-06-23', 'June 20, 2017']
+              })
+  .container
+    hr
+
+  .section-35
+    .container.text-center
+      .row.row-15.flex-md-row-reverse.justify-content-md-between.align-items-md-center
+        .col-md-6.text-md-right
+          .group-sm.group-middle
+            p.font-italic.text-white Follow Us:
+            ul.list-inline.list-inline-reset
+              li: a.novi-icon.icon.icon-default.icon-xxs-smaller.fa.fa-facebook(href='#')
+              li: a.novi-icon.icon.icon-default.icon-xxs-smaller.fa.fa-twitter(href='#')
+              li: a.novi-icon.icon.icon-default.icon-xxs-smaller.fa.fa-google-plus(href='#')
+
+        .col-md-6.text-md-left
+          p.rights
+            span.copyright-year
+            span &nbsp;&#169;&nbsp;
+            span LawFirm.&nbsp;
+            a.link-white-v2(href='privacy-policy.html') Privacy Policy
+='\n'

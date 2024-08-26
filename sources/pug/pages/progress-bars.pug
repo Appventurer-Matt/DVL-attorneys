@@ -1,0 +1,48 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_section-counters-default
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Progress bars'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1')
+
+  //- Skill Bars
+  section.section-60.section-md-75.section-xl-bottom-120
+    .container
+      h3.text-center Skill Bars
+      .row.row-40.row-offset-2.align-items-center.justify-content-lg-between
+        .col-md-6.col-xl-5
+          p We do not see ourselves simply as 'lawyers' but will always strive to be our clients' trusted adviser whether that be in a commercial or personal context. We provide additional services well beyond those that might be expected of a law firm.
+          p Our core values are integrity and trust, the encouragement of innovation, teamwork and the continuing personal development of everyone at the firm.
+        .col-md-6
+          include ../_includes/_progress-list
+  ='\n'
+
+  +counter-default({
+    title: 'Counters'
+  })
+
+  //- Progress Bars
+  section.section-60.section-md-75.section-lg-top-100.section-lg-bottom-120
+    .container
+      h3.text-center Countdown Timer
+      .row
+        .col-sm-12
+          .countdown-wrap.block-centered
+            //- Countdown
+            .DateCountdown.DateCountdown-1(data-type='until', data-date='2018-12-31 00:00:00', data-format='wdhms', data-color='#cca876', data-bg='rgba(247, 247, 247, 1)', data-width='0.02')
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

@@ -1,0 +1,13 @@
+//- Post boxed
+mixin post-boxed(obj)
+  article.post-boxed
+    a.post-boxed-image(href='blog-post.html')
+      +jpg(obj.img)
+    .post-boxed-body
+      .post-boxed-title
+        a(href="blog-post.html")=obj.header
+      ul.post-boxed-meta
+        li: time(datetime=obj.time[0])=obj.time[1]
+        li
+          span by
+          a(href='#')=obj.user

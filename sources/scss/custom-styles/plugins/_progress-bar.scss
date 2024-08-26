@@ -1,0 +1,185 @@
+/*
+* @subsection   Progress Bar
+*/
+
+.progress-bar-wrap {
+  max-width: 100%;
+  width: 210px;
+
+  @include media-breakpoint-between(sm, sm) {
+    max-width: 120px;
+  }
+
+  @include media-breakpoint-up(md) {
+    max-width: 150px;
+  }
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  margin: 0;
+
+
+  .progress-bar__body {
+    position: absolute;
+    right: 50%;
+    width: 100%;
+    top: 50%;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    line-height: 26px;
+    color: $black; 
+    text-align: right;
+
+    &:after { 
+      content: '%';
+    }
+  }
+
+  .progress-bar__stroke,
+  .progress-bar__trail {
+    stroke-linejoin: round;
+  }
+}
+
+.progress-bar-horizontal {
+  position: relative;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -.025em;
+
+  > svg {
+    margin-top: 3px;
+    border-radius: 3px;
+  }
+
+  .progress-bar__body {
+    position: absolute;
+    top: -27px;
+    margin-top: 0;
+    padding-right: 0;
+
+    &:after {
+      content: '%';
+    }
+  }
+}
+
+.progress-bar-radial {
+  position: relative;
+  padding-bottom: 100%;
+
+  > svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .progress-bar__stroke,
+  .progress-bar__trail {
+    stroke-location: outside;
+  }
+
+  .progress-bar__body {
+    transform: translate(50%, -50%);
+  }
+}
+
+.progress-bar-default {
+  .progress-bar__stroke {
+    stroke: $secondary;
+  }
+
+  .progress-bar__trail {
+    stroke: $gallery;
+  }
+}
+
+.progress-bar-sisal {
+  .progress-bar__stroke {
+    stroke: $sisal;
+  }
+
+  .progress-bar__trail {
+    stroke: $gallery;
+  }
+}
+
+.progress-bar-laser {
+  .progress-bar__stroke {
+    stroke: $laser;
+  }
+
+  .progress-bar__trail {
+    stroke: $gallery;
+  }
+}
+
+.progress-bar-fuscous-gray {
+  .progress-bar__stroke {
+    stroke: $fuscous-gray;
+  }
+
+  .progress-bar__trail {
+    stroke: $gallery;
+  }
+}
+
+.progress-bar-leather {
+  .progress-bar__stroke {
+    stroke: $leather;
+  }
+
+  .progress-bar__trail {
+    stroke: $gallery;
+  }
+}
+
+.progress-bar-secondary-2 {
+  .progress-bar__stroke {
+    stroke: $gray-light;
+  }
+
+  .progress-bar__trail {
+    stroke: gray;
+  }
+}
+
+.progress-bar-secondary-1 {
+  .progress-bar__stroke {
+    stroke: $gray-light;
+  }
+
+  .progress-bar__trail {
+    stroke: rgba($gray, 0.05);
+  }
+}
+
+.progress-bar-secondary-3 {
+  .progress-bar__stroke {
+    stroke: $warning;
+  }
+
+  .progress-bar__trail {
+    stroke: rgba($gray, 0.05);
+  }
+}
+
+.progress-bar-secondary-4 {
+  .progress-bar__stroke {
+    stroke: $danger;
+  }
+
+  .progress-bar__trail {
+    stroke: rgba($gray, 0.05);
+  }
+}
+
+
