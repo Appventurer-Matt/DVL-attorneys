@@ -1,0 +1,43 @@
+extends  ../_skeleton
+
+block variables
+  - var pageName = 'Coming soon'
+
+block title
+  title=pageName
+
+block page
+  section.section.section-single.novi-background.bg-gray-darker.novi-background(style='background-image: url(images/bg-special.jpg);')
+    .section-single-inner
+      //- Page Header
+      include ../sections/_section-header-base-transparent
+
+      //- Page Content
+      section.section-single-main
+        .container
+          h2.text-style-lighter
+            | We're Getting Ready
+            br
+            | to Launch in 
+          .block-centered 
+            .countdown-wrap.block-centered
+              //- Countdown
+              .DateCountdown.DateCountdown-1.countdown-inverse(data-type='until', data-date='2018-12-31 00:00:00', data-format='wdhms', data-color='#cfaa45', data-bg='rgba(247, 247, 247, 1)', data-width='0.02')
+
+          p.text-white
+            | Our website is under construction, we are working very hard
+            br.d-none.d-sm-block
+            |  to give you the best experience on our new web site.
+          .row.justify-content-md-center
+            .col-md-6.col-lg-5.col-xl-4
+                h5 Stay ready, we`re launching soon
+                //- RD Mailform
+                form.rd-mailform.form-modern(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+                  .form-wrap
+                    label.form-label(for="contact-email") Email
+                    input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+                  button(type="submit").button.button-primary.button-block Subscribe
+      ='\n'
+
+      //- Page Footer
+      include ../sections/_section-footer-base-transparent

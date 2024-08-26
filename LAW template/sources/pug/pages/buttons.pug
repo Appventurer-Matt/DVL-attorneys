@@ -1,0 +1,69 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-quote-default
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Buttons'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1')
+
+  //- Buttons
+  section.section-60.section-md-top-90.section-md-bottom-100
+    .container
+      .row.row-60.row-lg-90
+        .col-12
+          h3 Button Sizes
+          p 4 different sizes: super, large, default and small.
+          .group-lg.group-middle
+            .button.button-xl.button-primary Super size
+            .button.button-lg.button-primary Large size
+            .button.button-primary Default Size
+            .button.button-sm.button-primary Small size
+
+        .col-12
+          h3 Button Shapes
+          p 4 different shapes: default, round, round 2 and circle.
+          .group-lg.group-middle
+            .button.button-primary Default
+            .button.button-primary.button-round Round 1
+            .button.button-primary.button-round-2 Round 2
+            .button.button-primary.button-circle Circle
+
+        .col-12
+          h3 Buttons with Icons
+          p Buttons are fully integrated with 900+ icons.
+          .group-lg.group-middle
+            .button.button-icon.button-icon-left.button-primary
+              span.novi-icon.icon.icon-xs-smaller.material-icons-shopping_cart
+              | Icon Left
+            .button.button-icon.button-icon-right.button-primary
+              span.novi-icon.icon.icon-xs-smaller.material-icons-shopping_cart
+              | Icon Right
+            .button.button-icon.button-icon-left.button-primary-outline
+              span.novi-icon.icon.icon-xs-smaller.material-icons-shopping_cart
+              | Icon Left
+            .button.button-icon.button-icon-right.button-primary-outline
+              span.novi-icon.icon.icon-xs-smaller.material-icons-shopping_cart
+              | Icon Right
+
+        .col-12
+          h3 Buttons with Shadow
+          p Enhance your button with a shadow effect.
+          .group-lg.group-middle
+            .button.button-primary.button-shadow Shadow
+            .button.button-primary-outline.button-shadow Shadow
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

@@ -1,0 +1,11 @@
+//- Icon box
+mixin icon-box(obj)
+  a.icon-box(class=obj.mod href='#')
+    .box-top
+      .box-icon
+        span.novi-icon.icon.icon-primary(class=obj.icon)
+      .box-header: h5=obj.header
+    .box-divider
+    .box-body 
+      p=obj.text
+
